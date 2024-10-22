@@ -1,2 +1,1 @@
-// Happy Coding!
-console.log('Polymesh Rocks!');
+export * from './lib/approval-signing-manager';
