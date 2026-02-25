@@ -73,5 +73,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd dist
-          yarn --immutable
+          yarn install
           yarn semantic-release
