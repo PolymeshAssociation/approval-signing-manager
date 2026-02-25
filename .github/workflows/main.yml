@@ -67,11 +67,10 @@ jobs:
           yarn build:ts
           sed 's/dist\//.\//' package.json > dist/package.json
           cp README.md dist/README.md
-          touch dist/yarn.lock
       - name: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd dist
-          yarn install
+          yarn install --no-immutable
           yarn semantic-release
